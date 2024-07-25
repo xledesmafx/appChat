@@ -1,20 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Acceso</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header [translucent]="true"></ion-header>
 
-<ion-content [fullscreen]="true" class="contenido" >
-  <ion-item>
-    <ion-label position="floating">Username</ion-label>
-    <ion-input [(ngModel)]="user.username"></ion-input>
+<ion-content [fullscreen]="true" class="contenido">
+  <ion-label class="txt_iniciar">INICIAR SESION</ion-label>
+  <ion-item class="contenedor">
+    <ion-label class="datos" position="floating">Usuario:</ion-label>
+    <ion-input class="input" [(ngModel)]="user.username"></ion-input>
   </ion-item>
-  <ion-item>
-    <ion-label position="floating">Pasword</ion-label>
-    <ion-input [(ngModel)]="user.password" type="password"></ion-input>
+  <ion-item class="contenedor">
+    <ion-label class="datos" position="floating">Contraseña:</ion-label>
+    <ion-input class="input" [(ngModel)]="user.password" type="password"></ion-input>
   </ion-item>
-
-  <ion-button expand="block" (click)="validar()" color="primary" shape="round" class="btn-ingresar">
+  <ion-label class="olvide" >Olvidaste la contraseña?</ion-label>
+  <ion-button expand="block" (click)="validar()" shape="round" class="btn-ingresar">
     Ingresar
   </ion-button>
+  <ion-label class="registre">No tienes una cuenta?<br>Registrate</ion-label>
 </ion-content>

@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
+<<<<<<< Updated upstream
 import { Observable } from 'rxjs';
+=======
+import { LoginResponse } from '../interfaces/LoginResponse';
+>>>>>>> Stashed changes
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +20,8 @@ export class AppChatService {
       formData.append('username',username);
       formData.append('password',password);
       var url='https://www.hostcatedral.com/api/app-chat/public/login';
-      return this.http.post(url,formData);
+
+      return this.http.post<LoginResponse>(url,formData);
   }
 
   getGroupMessages(groupId: number): Observable<any[]> {

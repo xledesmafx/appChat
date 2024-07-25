@@ -9,13 +9,14 @@ import { AppChatService } from 'src/app/services/app-chat.service';
 export class HomePage {
 
   constructor(private appChatService:AppChatService) {
-  this.acceso();
+  //this.acceso();
   }
 
-  acceso(){
+ /* acceso(){
     this.appChatService.login('user1','password1').subscribe(
       data=>{
           console.log(data);
       });
   }
+      */
 }

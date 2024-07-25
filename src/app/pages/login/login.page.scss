@@ -1,5 +1,51 @@
+/* General styles */
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #007bff;
+}
+
+/* Center the "INICIAR SESION" label */
+.txt_iniciar {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Add spacing between ion-items */
+.contenedor {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+/* Style the ion-input with black border and rounded corners */
+.input {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+/* Style the "Olvidaste la contraseña?" label */
+.olvide {
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Style the button */
 .btn-ingresar {
-    --background: #ff5733; /* Cambia el color de fondo */
-    --color: #ffffff; /* Cambia el color del texto */
-    --border-color: #ff5733; /* Cambia el color del borde si es necesario */
-  }
+  background-color: green;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+/* Style the "No tienes una cuenta? Registrate" label */
+.registre {
+  text-align: center;
+  font-size: 14px;
+  color: #007bff; /* Change to your preferred color */
+}
