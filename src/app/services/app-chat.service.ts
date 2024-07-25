@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class AppChatService {
   
+  private baseUrl = 'https://www.hostcatedral.com/api/app-chat/public';
 
   constructor(private http:HttpClient) { }
 
@@ -29,7 +30,7 @@ export class AppChatService {
     formData.append('group_id', group_id.toString());
     formData.append('content', content);
 
-    const url = 'https://www.hostcatedral.com/api/app-chat/public/group-messages';
+    const url = `${this.baseUrl}/group-messages`;
     return this.http.post<any>(url, formData);
   }
 

@@ -8,6 +8,7 @@ import { AppChatService } from '../../services/app-chat.service';
 })
 export class GroupPage implements OnInit {
   messages: any[] = [];
+  newMessageContent: string = '';
 
   constructor(private appChatService:AppChatService) { }
 
@@ -27,4 +28,22 @@ export class GroupPage implements OnInit {
       }
     );
   }
+
+  sendMessage() {
+    const senderId = 1; // ID del remitente
+    const groupId = 1;  // ID del grupo
+    const content = this.newMessageContent; // Contenido del mensaje
+
+    this.appChatService.postGroupMessages(senderId, groupId, content).subscribe(
+      response => {
+        this.loadGroupMessages(); // Recargar los mensajes después de enviar uno nuevo
+        this.newMessageContent = ''; // Limpiar el contenido del nuevo mensaje
+      },
+      error => {
+        console.error('Error sending message', error);
+      }
+    );
+  }
+
+
 }
